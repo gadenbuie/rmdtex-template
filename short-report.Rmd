@@ -14,14 +14,14 @@ mainfont: Roboto
 sansfont: IBM Plex Serif
 ---
    
-# Introduction
+## Introduction
 
 `r paste(stringi::stri_rand_lipsum(2), collapse = "\n\n")`
 
-# Progress
+## Progress
 
 `r paste(stringi::stri_rand_lipsum(2, start_lipsum = FALSE), collapse = "\n\n")`
 
-# Future Directions
+## Future Directions
 
 `r paste(stringi::stri_rand_lipsum(3, start_lipsum = FALSE), collapse = "\n\n")`
