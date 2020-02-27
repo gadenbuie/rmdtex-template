@@ -252,8 +252,12 @@ $endfor$
 
 % change section title styling
 \usepackage{sectsty}
-\sectionfont{\normalsize\normalfont\itshape}
-\subsectionfont{\normalsize\normalfont}
+\sectionfont{\normalsize\bfseries\itshape}
+% \subsectionfont{\normalsize\bfseries\normalfont}
+
+\usepackage{titlesec}
+\titlespacing{\subsection}{0pt}{\parskip}{0pt}
+\titleformat*{\subsection}{\normalsize\sffamily\bfseries}
 
 % use fancyhdr style
 $if(fancy)$
@@ -265,9 +269,9 @@ $if(fancy)$
 \renewcommand{\maketitle}{\bgroup\vspace*{-1cm}\setlength{\parindent}{0pt}
 \begin{flushleft}
   \@author
-  
+
   \@date
-  
+
 \end{flushleft}\egroup
 }
 \makeatother
@@ -276,15 +280,15 @@ $else$
 \renewcommand{\maketitle}{\bgroup\vspace*{-2cm}\setlength{\parindent}{0pt}
 \begin{flushleft}
   \textbf{\@title}
-  
+
   $if(my_subtitle)$
   \emph{$my_subtitle$}
   $endif$
-  
+
   \@author
-  
+
   \@date
-  
+
 \end{flushleft}\egroup
 }
 \makeatother
